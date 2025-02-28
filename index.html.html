@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CEPs por zona/região</title>
+    <script src="cepTable.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div>
+        <h1>Verificar Zona de São Paulo</h1>
+        <label for="cepInput">Digite os CEPs:</label>
+        <input type="text" id="cepInput">
+        <button onclick="adicionarCep()"> 1- Adicionar</button>
+        <button onclick="verificarZonas()">2- Verificar</button>
+        <button onclick="exportarParaExcel()">3- Exportar para Planilha</button>
+        <p id="resultado"></p>
+    
+        <table id="resultadoTable">
+            <thead>
+                <tr>
+                    <th>CEP</th>
+                    <th>Zona</th>
+                </tr>
+            </thead>
+            <tbody id="resultadoBody"></tbody>
+        </table>
+    </div>
+    <div>
+        <section>
+            <button type="button" class="collapsible">Centro São Paulo - (01000 a 01599)</button>
+            <div class="content">
+                <p id="demo"></p>
+                <h4>Centro São Paulo (01000 a 01599)</h4>
+                <p>01000 a 01099 – Centro (Sé / Santa Efigênia / República / Centro)</p>
+                <p>01100 a 01199 – Bom Retiro (Barra Funda / Bom Retiro / Luz / Ponte Pequena)</p>
+                <p>01200 a 01299 – Vila Buarque (Santa Cecília/ Pacaembú / Sumaré / Higienópolis / Consolação)</p>
+                <p>01300 a 01399 – Consolação (Consolação / Bela Vista)</p>
+                <p>01400 a 01499 – Jardins (Cerqueira César / Jd. Paulista / Jd. América / Jd. Europa)</p>
+                <p>01500 a 01599 – Liberdade( Liberdade / Cambuci / Aclimação / Vl. Monumento / Jd.da Glória)</p>
+            </div>
+        </section>
+        <br>
+        <section>
+            <button type="button" class="collapsible">Zona Norte - (02000 a 02999)</button>
+            <div class="content">
+                <h4>Zona Norte São Paulo (02000 a 02999)</h4>
+                <p>02000 a 02099 – Santana (Santana / Carandiru / Vl. Guilherme / Jd. São Paulo)</p>
+                <p>02100 a 02199 – Vila Maria (Vl. Maria / Pq. Novo Mundo/ Jd. Japão)</p>
+                <p>02200 a 02299 – Jaçanã e Tucuruvi (Tucuruvi / Jaçanã / Pq. Edu Chaves / Vl. Medeiros / Vl. Edi)</p>
+                <p>02300 a 02399 – Tremembé (Jd. Tremembé / Barro Branco / Água Fria)</p>
+                <p>02400 a 02499 – Mandaqui (Mandaqui / Imirim / Lausane Paulista / Santa Teresinha)</p>
+                <p>02500 a 02599 – Casa Verde (Casa Verde / Pq. Peruche)</p>
+                <p>02600 a 02699 – Cachoeirinha (Vl. Nova Cachoeirinha / Jardim Peri Peri)</p>
+                <p>02700 a 02799 – Limão (Limão / Nossa Senhora do Ó / Itaberaba)</p>
+                <p>02800 a 02899 – Brasilândia (Brasilândia / Morro Grande)</p>
+                <p>02900 a 02999 – Freguesia do Ó (Freguesia do Ó / Pirituba / Piqueri)</p>
+            </div>
+        </section>
+        <br>
+        <section>
+            <button type="button" class="collapsible">Zona Leste - (03000 a 03999 e 08000 a 08499)</button>
+            <div class="content">
+                <h4>Zona Leste São Paulo (03000 a 03999 e 08000 a 08499)</h4>
+                <p>03000 a 03099 – Brás (Belenzinho / Brás / Belém / Pari / Canindé / Catumbi / Pq.S.Jorge)</p>
+                <p>03100 a 03199 – Moóca (Moóca / Alto da Moóca / Vl. Prudente / A. Rosa / Quarta Parada / Parque Moóca / Vl. Zelina)</p>
+                <p>03200 a 03299 – São Lucas (Vl.Ema / Pq. São Lucas / Vl. Alpina / Sapopemba)</p>
+                <p>03300 a 03399 – Anália Franco (Tatuapé / Vl. Formosa / Jd. Colorado / Vl. Gomes Cardim / Jd.Anália Franco)</p>
+                <p>03400 a 03499 – Carrão e Aricanduva (Vl. Carrão / Carrãozinho)</p>
+                <p>03500 a 03599 – Vila Matilde (Vila Matilde / Cidade Patriarca / Artur Alvim)</p>
+                <p>03600 a 03699 – Penha (Penha / Vl. Esperança / Vl. Ré / Cidade A. E. Carvalho)</p>
+                <p>03700 a 03799 – Cangaíba (Cangaíba / Engenho Goulart / Ponte Rasa)</p>
+                <p>03800 a 03899 – Ermelino Matarazzo (Ermelino Matarazzo / Vl. Paranaguá)</p>
+                <p>03900 a 03999 – São Mateus (São Mateus / Iguaçu)</p>
+                <p>08000 a 08099 – São Miguel Paulista</p>
+                <p>08100 a 08199 – Itaim Paulista</p>
+                <p>08200 a 08299 – Itaquera</p>
+                <p>08300 a 08399 – São Mateus</p>
+                <p>08400 a 08499 – Guaianazes</p>
+            </div>
+        </section>
+        <br>
+        <section>
+            <button type="button" class="collapsible">Zona Sul - (04000 a 04999)</button>
+            <div class="content">
+                <h4>Zona Sul São Paulo (04000 a 04999)</h4>
+                <p>04000 a 04099 – Moema e Vila Mariana (Oeste) (Vl. Mariana / Vila Clementino / Paraíso / Indianópolis / Moema / Planalto Paulista / Mirandópolis)</p>
+                <p>04100 a 04199 – Saúde e Vila Mariana (Leste) (Jd. Glória / Saúde / Água Funda / Vl. Mercês / Vila Liviero) </p>
+                <p>04200 a 04299 – Ipiranga (Ipiranga / Vl. Carioca / Sacomã / Moinho Velho / São João Clímaco)</p>
+                <p>04300 a 04399 – Jabaquara (Jabaquara / Jd. Aeroporto / Vl. Sta Catarina / Vl. Guarani / Vl. Mascote)</p>
+                <p>04400 a 04499 – Cidade Adema (Cidade Ademar / Pedreira / Jd. Miriam / Americanópolis)</p>
+                <p>04500 a 04599 – Itaim bibi (Brooklin Novo / Itaim Bibi / Vl. Olímpia / Moema / Vl. Nova Conceição)</p>
+                <p>04600 a 04699 – Campo Belo (Brooklin Paulista / Campo Belo / Aeroporto / Cidade Ademar / Campo Grande / Jurubatuba / Chácara Flora / Chácara Monte Alegre)</p>
+                <p>04700 a 04799 – Santo Amaro (Santo Amaro / Chácara Santo Antônio / Granja Julieta / Socorro / Veleiros / Interlagos / Alto da Boa Vista)</p>
+                <p>04800 a 04899 – Cidade Dutra e Grajaú (Cidade Dutra / Rio Bonito / Pq. Grajaú / Parelheiros)</p>
+                <p>04900 a 04999 – Guarapiranga (Guarapiranga / Capela do Socorro)</p>
+            </div>
+        </section>
+        <br>
+        <section>
+            <button type="button" class="collapsible">Zona Oeste - (05000 a 05899)</button>
+            <div class="content">
+                <h4>Zona Oeste São Paulo (05000 a 05899)</h4>
+                <p>05000 a 05099 – Lapa e Perdizes (Lapa / Perdizes / Água Branca / Alto da Lapa / Vl. Anastácia / Pompéia / Vl. Romana)</p>
+                <p>05100 a 05199 – Pirituba e Jaraguá (Vila Jaguara / Pirituba / Pq. São Domingos)</p>
+                <p>05200 a 05299 – Perus (Jaraguá / Perus)</p>
+                <p>05300 a 05399 – Jaguará e Leopoldina (Vila Leopoldina / Ceasa / Jaguaré / Rio Pequeno / Vl. Hamburguesa / Vl. Remédios)</p>
+                <p>05400 a 05499 – Pinheiros (Pinheiros / Vl. Madalena / Alto de Pinheiros)</p>
+                <p>05500 a 05599 – Butantã (Butantã / Caxingui / Cidade Universitária (USP) / Jd.Peri-Peri / Jd.Bonfiglioli)</p>
+                <p>05600 a 05699 – Morumbi (Cidade Jardim / Morumbi / Vl. Sônia / Jd. Guedala / Jd. Leonor / Real Parque)</p>
+                <p>05700 a 05799 – Campo Limpo (Campo Limpo / Pirajuçara)</p>
+                <p>05800 a 05899 – Capão Redondo (Capão Redondo / Vl. Das Belezas)</p>
+            </div>
+        </section>
+        <br>
+        <section>
+            <button type="button" class="collapsible">Grande São Paulo - (06000 a 09999)</button>
+            <div class="content">
+                <h4> Grande São Paulo (06000 a 09999)</h4>
+                <p>06000 a 06299 – Osasco</p>
+                <p>06300 a 06399 – Carapicuíba</p>
+                <p>06400 a 06499 – Barueri</p>
+                <p>06500 a 06549 – Santana do Parnaíba</p>
+                <p>06650 a 06699 – Itapevi </p>
+                <p>06600 a 06649 – Jandira</p>
+                <p>06700 a 06729 – Cotia</p>
+                <p>06730 a 06749 – Vargem Grande Paulista</p>
+                <p>06750 a 06799 – Taboão da Serra</p>
+                <p>06800 a 06849 – Embu</p>
+                <p>06850 a 06899 – Itapecirica da Serra</p>
+                <p>06900 a 06999 – Embu-Guaçu</p>
+                <p>07000 a 07399 – Guarulhos</p>
+                <p>07400 a 07499 – Arujá</p>
+                <p>07500 a 07599 – Santa Isabel</p>
+                <p>07600 a 07699 – Mairiporã</p>
+                <p>07700 a 07749 – Caieiras</p>
+                <p>07750 a 07759 – Cajamar</p>
+                <p>07760 a 07769 – Jordanesia</p>
+                <p>07770 a 07799 – Polvilho</p>
+                <p>07800 a 07870 – Franco da Rocha</p>
+                <p>07900 a 07999 – Francisco Morato</p>
+                <p>08000 a 08499 – São Paulo Zona Leste (especificado anteriormente)</p>
+                <p>08500 a 08549 – Ferraz De Vasconcelos</p>
+                <p>08550 a 08569 – Poá</p>
+                <p>08570 a 08599 – Itaquaquecetuba</p>
+                <p>08600 a 08699 – Suzano</p>
+                <p>08700 a 08899 – Mogi das Cruzes</p>
+                <p>08900 a 08999 – Guararema</p>
+                <p>09000 a 09299 – Santo André</p>
+                <p>09300 a 09399 – Mauá</p>
+                <p>09400 a 09449 – Ribeirão Pires</p>
+                <p>09450 a 09499 – Rio Grande da Serra</p>
+                <p>09500 a 09599 – São Caetano do Sul </p>
+                <p>09600 a 09899 – São Bernardo do Campo</p>
+                <p>09900 a 09999 – Diadema</p>
+                <br><br>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
