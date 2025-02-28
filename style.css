@@ -1,0 +1,94 @@
+.collapsible {
+  background-color: #777;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+.active, .collapsible:hover {
+  background-color: #555;
+}
+
+.content {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: #f1f1f1;
+}
+
+
+/* body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin: 20px;
+}
+#cepInput {
+  width: 300px;
+  padding: 5px;
+  margin-bottom: 10px;
+}
+button {
+  padding: 5px 10px;
+  cursor: pointer;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+ul {
+  list-style: none;
+  padding: 0;
+}
+li {
+  background: #f4f4f4;
+  padding: 10px;
+  margin: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.remove-btn {
+  background: red;
+  color: white;
+  border: none;
+  padding: 5px;
+  cursor: pointer;
+  border-radius: 3px;
+} */
+
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin: 20px;
+}
+#cepInput {
+  width: 300px;
+  padding: 5px;
+  margin-bottom: 10px;
+}
+button {
+  padding: 5px 10px;
+  cursor: pointer;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+table {
+  width: 50%;
+  margin: 20px auto;
+  border-collapse: collapse;
+}
+th, td {
+  border: 1px solid black;
+  padding: 8px;
+  text-align: left;
+}
+th {
+  background-color: #f2f2f2;
+}
